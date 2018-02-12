@@ -1,0 +1,206 @@
+* /*REMOVES UNWANTED SPACING*/
+{
+	margin: 0;
+	padding: 0;
+}
+
+#footer
+{
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	background-color: #211f20;
+	padding-top: 5px;
+	padding-bottom: 2px;
+}
+
+.sub_details li
+{
+	list-style: none;
+}
+
+.sub_details li p
+{
+	font-size: 0.85em;
+}
+
+.sub_details li a
+{
+	text-decoration: none;
+}
+
+.sub_details li a p
+{
+	transition: all .2s ease-in-out;
+}
+
+.sub_details li a p:hover, .sub_details li a p:active
+{
+	transform: scale(1.1);
+}
+
+.sub_details p
+{
+	color: #d5d2cd;
+	text-align: left !important;
+}
+
+#social_media
+{
+	padding-left: 40px;
+}
+
+#social_media a
+{
+	text-decoration: none;
+	padding: 1.5px;
+}
+
+#details
+{
+	padding-left: 40px;
+}
+
+#details h4
+{
+	font-family: "Quattrocento";
+	font-size: 1em;
+	color: #FFFDFA;
+}
+
+.site-map
+{
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 15px;
+}
+
+.site-map h4
+{
+	color: #b02787;
+}
+
+#store
+{
+	vertical-align: top;
+	display: inline-block;
+	padding-bottom: 15px;
+}
+
+#store a
+{
+	text-decoration: none;
+	color: #b02787;
+}
+
+#store a:hover, #store a:active
+{
+	color: #d12ea0;
+}
+
+#tournaments
+{
+	padding-top: 15px; 
+}
+
+.container
+{
+	display: inline-block;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+#legal
+{
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	padding-left: 45px;
+}
+
+#copy
+{
+	font-family: "Quattrocento";
+	font-size: 0.8em;
+	color: #FFFDFA;
+	padding-bottom: 5px;
+}
+
+#developer
+{
+	text-decoration: none;
+}
+
+#developer p
+{
+	font-family: "Quattrocento";
+	font-size: 0.8em;
+	color: #FFFDFA;
+	padding-left: 5px;
+	margin-bottom: 10px;
+}
+
+#developer p:hover, .developer p:active
+{
+	text-shadow: 0px 0px 3px #85F5FF;
+}
+
+.brands ul
+{
+	list-style: none;
+	width: auto;
+	display: inline-block;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0);
+	white-space: nowrap;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.brands li
+{
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 80px;
+}
+
+.brands img
+{
+	width: 100%;
+	height: auto;
+}
+
+.tbl td
+{
+	vertical-align: top;
+	padding-right: 15px;
+}
+
+/* SMALL SCREEN/MOBILE SUPPORT */
+@media only screen and (max-width: 800px)
+{	
+	#store
+	{
+		display: inherit;
+	}
+	
+	.container
+	{
+		display: inherit;
+	}
+	
+	.site-map
+	{
+		padding-left: 40px;	
+	}
+	
+	.brands
+	{
+		display: none;
+	}
+}

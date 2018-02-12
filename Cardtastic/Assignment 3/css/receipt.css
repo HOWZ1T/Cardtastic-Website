@@ -1,0 +1,218 @@
+/*FONT FACE IMPORTS*/
+@font-face 
+{
+  font-family: "Risque";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Risque"), local("Risque-Regular"), url("https://fonts.gstatic.com/s/risque/v5/TBIDxp8AFCZUbeELSgrJGA.woff2") format("woff2");
+  unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+@font-face 
+{
+  font-family: "Kalam";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Kalam"), local("Kalam-Regular"), url("https://fonts.gstatic.com/s/kalam/v8/IOem-i1iklYvPM2B8plGmg.woff2") format("woff2");
+  unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+@font-face 
+{
+  font-family: "Quattrocento";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Quattrocento"), url("https://fonts.gstatic.com/s/quattrocento/v9/WZDISdyil4HsmirlOdBRFOgdm0LZdjqr5-oayXSOefg.woff2") format("woff2");
+  unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+.center
+{
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+.receipt
+{
+	width: 21cm;
+	max-height: 29.7cm;
+	background-color: white; /*TODO REMOVE*/
+}
+
+.contact
+{
+	width: 289px;
+	height: 140px;
+	resize: none;
+	border: none;
+	overflow: none;
+	outline: none;
+	box-shadow: none;
+	
+	font-family: "Quattrocenot";
+}
+
+.title
+{
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0);
+	
+	height: 40px;
+	
+	font-family: "Quattrocento";
+	font-weight: bold;
+	color: #FFFFFF;
+	
+	background-color: #000000;
+	
+	margin-bottom: 5px;
+}
+
+.title h1
+{
+	position: relative;
+	text-align: center;
+	vertical-align: middle;
+	padding-top: 2.5px;
+}
+
+#logo
+{
+	position: relative;
+	vertical-align: top;
+	float:right;
+}
+
+.card
+{
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+#customer
+{
+	font-family: "Quattrocento";
+	font-size: 1.6em;
+	font-weight: bold;
+	display: inline-block;
+}
+
+#meta
+{
+	float: right;
+	font-family: "Quattrocento";
+	border-collapse: collapse;
+	margin-bottom: 25px;
+	margin-top: 20px;
+}
+
+#meta td
+{
+	border: 1px solid black;
+	padding: 2px 5px 2px 5px;
+}
+
+.td-head
+{
+	background-color: #eeeeee;
+}
+
+.td-data
+{
+	text-align: right;
+}
+
+#products
+{
+	font-family: "Quattrocento";
+	border-collapse: collapse;
+	width: 100%;
+	
+	border: 1px solid black;
+	
+}
+
+#products th
+{
+	background-color: #eeeeee;
+	border: 1px solid black;
+	padding: 1px 2px 1px 2px;
+}
+
+#products tr
+{
+	border-bottom: 1px solid black;
+}
+
+#total
+{
+	float: right;
+	font-family: "Quattrocento";
+	border-collapse: collapse;
+	margin-top: 20px;
+}
+
+#total td
+{
+	border: 1px solid black;
+	padding: 2px 5px 2px 5px;
+}
+
+h2
+{
+	font-family: "Quattrocento";
+	font-weight: 100;
+	font-size: 1em;
+	text-align: center;
+	padding: 0px 0px 2px 0px;
+}
+
+.tc
+{
+	margin-top: 60px;
+}
+
+.tc-head
+{
+	border-bottom: 1px solid black;
+}
+
+.align
+{
+	width: 21cm;
+	margin-top: 2.5px;
+	margin-bottom: 2.5px;
+}
+
+input
+{
+	position: relative;
+	left: 100%;
+	transform: translate(-100%, 0);
+	
+	font-family: "Quattrocento";
+	font-weight: 800;
+	font-size: 1.2em;
+	
+	background-color: #eeeeee;
+	
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 5px solid #d1d1d1;
+}
+
+input:hover
+{
+	cursor: pointer;
+}
+
+input:active
+{
+	padding-top: 2px;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 2px solid #d1d1d1;
+}

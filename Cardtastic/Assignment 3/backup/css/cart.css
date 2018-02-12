@@ -1,0 +1,190 @@
+/*FONT FACE IMPORTS*/
+@font-face 
+{
+  font-family: "Risque";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Risque"), local("Risque-Regular"), url("https://fonts.gstatic.com/s/risque/v5/TBIDxp8AFCZUbeELSgrJGA.woff2") format("woff2");
+  unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+@font-face 
+{
+  font-family: "Kalam";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Kalam"), local("Kalam-Regular"), url("https://fonts.gstatic.com/s/kalam/v8/IOem-i1iklYvPM2B8plGmg.woff2") format("woff2");
+  unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+@font-face 
+{
+  font-family: "Quattrocento";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Quattrocento"), url("https://fonts.gstatic.com/s/quattrocento/v9/WZDISdyil4HsmirlOdBRFOgdm0LZdjqr5-oayXSOefg.woff2") format("woff2");
+  unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+.cart
+{
+	min-height: 800px;
+	width: 800px;
+}
+
+.cart ul
+{
+	list-style: none;
+}
+
+.cart-center
+{
+	display: block;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+.cart-header div
+{
+	background-color: #821c63;
+	height: auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.cart-header div h1
+{
+	position: relative;
+	left:50%;
+	transform: translate(-50%, 0);
+}
+
+.cart-empty
+{
+	background-color: #211f20;
+	height: auto;
+	width: 800px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-color: #d5d2cd;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+}
+
+.cart-item
+{
+	display: inline-block;
+	background-color: #211f20;
+	border-color: #d5d2cd;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	padding: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	height: 200px;
+	width: 800px;
+	vertical-align: top;
+}
+
+
+.cart-item img
+{
+	display: inline-block;
+}
+
+.cart-item-details
+{
+	display: inline-block;
+	width: 400px;
+	height: 200px;
+	vertical-align: top;
+}
+
+.cart-item-details p 
+{
+	display: block;
+	text-align: left;
+	padding-left: 5px;
+	padding-top: 2px;
+	padding-bottom: 30px;
+}
+
+.cart-item-details div p
+{
+	display: inline;
+	font-size: 1.2em;
+	font-weight: 1.2em;
+	margin-right: 5px;
+	padding-left: 5px;
+	padding-bottom: 5px;
+}
+
+.button-remove
+{
+	display: block;
+	
+	font-family: "Quattrocento";
+	font-size: 1em;
+	font-weight: 0.8em;
+	
+	background: none;
+	border: none;
+	outline: none;
+	padding: 5px 0px 0px 5px;
+	cursor: pointer;
+	
+	color:#d5d2cd;
+	text-decoration: underline;
+}
+
+.button-remove:hover, .button-remove:active
+{
+	color: #FFFDFA;
+}
+
+.button-remove:link, .button-remove:visited
+{
+	color: #d5d2cd;
+}
+
+h2
+{
+	font-family: "Quattrocento";
+	font-size: 2em;
+    color: #FFFDFA;
+	padding-top: 5px;
+}
+
+/* SMALL SCREEN/MOBILE SUPPORT */
+@media only screen and (max-width: 800px)
+{	
+	.cart
+	{
+		width: 400px;
+	}
+	
+	.cart-empty
+	{
+		width: 400px;
+	}
+	
+	.cart-item
+	{
+		width: 400px;
+		height: auto;
+	}
+	
+	.cart-item-details
+	{
+		width: auto;
+		height: auto;
+	}
+	
+	.cart-item img
+	{
+		position: relative;
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
+}

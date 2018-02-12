@@ -1,0 +1,185 @@
+.categories
+{
+	position: relative; 
+	margin: auto; /*CENTERS THE CATEGORY DIV*/
+	width: 800px;
+}
+
+.categories span
+{
+	box-shadow: 0 4px 8px 0 rgba(218,88,179,0.12), 0 6px 20px 0 rgba(218,88,179,0.29);
+	transition: all .2s ease-in-out;
+}
+
+.categories span:hover, span:active
+{
+	box-shadow: 0px 0px 10px #85F5FF;
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+	z-index: 1;
+}
+
+.sub_categories
+{	
+	position: relative;
+	width: 100%;
+	left: 3.8%;
+	padding-bottom: 2px;
+	padding-top: 2px;
+}
+
+.sub_categories span
+{
+	display: inline-block;
+	width: 235px;
+}
+
+.sub_categories a
+{
+	text-decoration: none;
+	padding: 5px;
+}
+
+.inline
+{
+	position: relative;
+	display: inline-block;
+	
+	width: 100%;
+	height: 200px;
+	background-size: 100% 200px;
+	background-color: #da58b3;
+}
+
+.highlight
+{
+	position: relative;
+	display: inline-block;
+	
+	width: 95%;
+	height: 200px;
+	left: 2.5%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-size: 100% 200px;
+}
+
+#category
+{
+	text-align: center;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#category h3
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	
+	font-family: "Risque";
+	font-size: 2.5rem;
+	font-weight: 800;
+	color: #FFFDFA;
+	
+	text-shadow: 0px 0px 15px #da58b3;
+}
+
+.upcoming
+{
+	background-image: url("../../img/upcoming_thumb.png");
+}
+
+.board_games
+{
+	background-image: url("../../img/board_thumb.jpg");
+}
+
+.rpgs
+{
+	background-image: url("../../img/rpg_thumb.jpg");
+}
+
+.miniatures
+{
+	background-image: url("../../img/miniatures_thumb.jpg");
+}
+
+.card_games
+{
+	background-image: url("../../img/card_thumb.png");
+	background-size: 100% 500px;
+}
+
+.gift_vouchers
+{
+	background-image: url("../../img/cardtastic_logogiftvoucher.jpg");
+}
+
+.tournaments
+{
+	background-image: url("../../img/tournament_thumb.jpg");
+}
+
+.board_game_library
+{
+	background-image: url("../../img/board_game_library_thumb.jpg");
+}
+
+.loot
+{
+	background-image: url("../../img/loot_thumb.jpg");
+	background-size: 100% 600px;
+}
+
+.about-us
+{
+	padding-bottom: 5px;
+	border-style: inset;
+	border-width: 0px 0px 1px 0px;
+	border-bottom-color: #FFFDFA;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+.about-us h1
+{
+	font-size: 1.8em;
+	padding-bottom: 5px;
+}
+
+.about-us p
+{
+	font-size: 1.2em;
+	text-align: center;
+	padding-top: 2.5px;
+	padding-bottom: 5px;
+}
+
+/* SMALL SCREEN/MOBILE SUPPORT */
+@media only screen and (max-width: 800px)
+{
+	.categories
+	{
+		width: 235px;
+	}
+	
+	.highlight
+	{
+		width: 235px;
+		height: 200px;
+		background-size: auto;
+	}
+	
+	.sub_categories
+	{
+		left: 2%;
+	}
+	
+	.sub_categories span
+	{
+		display: block;
+	}
+}

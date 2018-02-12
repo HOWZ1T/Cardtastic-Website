@@ -1,0 +1,525 @@
+/*FONT FACE IMPORTS*/
+@font-face 
+{
+  font-family: "Risque";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Risque"), local("Risque-Regular"), url("https://fonts.gstatic.com/s/risque/v5/TBIDxp8AFCZUbeELSgrJGA.woff2") format("woff2");
+  unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+@font-face 
+{
+  font-family: "Kalam";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Kalam"), local("Kalam-Regular"), url("https://fonts.gstatic.com/s/kalam/v8/IOem-i1iklYvPM2B8plGmg.woff2") format("woff2");
+  unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+@font-face 
+{
+  font-family: "Quattrocento";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Quattrocento"), url("https://fonts.gstatic.com/s/quattrocento/v9/WZDISdyil4HsmirlOdBRFOgdm0LZdjqr5-oayXSOefg.woff2") format("woff2");
+  unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+body
+{
+	width: 100%;
+	background-color: #430f33;
+	background: linear-gradient(#5c1446, #430f33);
+}
+
+main
+{
+	width: 100%;
+	padding-top: 150px;
+	padding-bottom: 10px;
+}
+
+h1
+{
+	font-family: "Risque";
+	font-size: 2em;
+    color: #FFFDFA;
+	text-align: center;
+}
+
+p
+{
+	font-family: "Quattrocento";
+	font-size: 1.6em;
+	color: #FFFDFA;
+	text-align: center;
+}
+
+article
+{
+	min-height: 800px;
+}
+
+.inline-block
+{
+	display: inline-block;
+	vertical-align: top;
+	padding-bottom: 75px;
+}
+
+.product-grid
+{
+	position: relative;
+	min-height: 800px;
+	width: 800px;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+.product
+{
+	position: relative;
+	width: 200px;
+	height: 200px;
+	margin: 5px;
+	margin-bottom: 8px;
+	left: 90px;
+}
+
+.product a
+{
+	display: block;
+	background-color: white;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	width: 200px;
+	height: 200px;
+	text-decoration: none;
+	transition: all .2s ease-in-out;
+}
+
+.product a:hover, .product a:active
+{
+	box-shadow: 0px 0px 10px #85F5FF;
+	-moz-transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+	transform: scale(1.05);
+	z-index: 1;
+}
+
+.product p
+{
+	font-family: "Risque";
+	font-size: 1.4em;
+	overflow: hidden;
+	white-space: normal;
+	color: #FFFDFA;
+	text-align: left;
+}
+
+.product h2
+{
+	font-family: "Quattrocento";
+	font-size: 1.2em;
+	color: #FFFDFA;
+}
+
+.tooltip
+{
+	display: inline;
+	position: relative;
+	z-index: 3;
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein 
+{
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein 
+{
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein 
+{
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein 
+{
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.tooltip:hover::after
+{
+	width:auto;
+	background: #555;
+    border-radius: 5px;
+    bottom: 20px;
+    color: #FFFDFA;
+	font-size: 0.8em;
+    content: attr(title);
+    left: 30%;
+    padding: 5px 15px;
+    position: absolute;
+    z-index: 3;
+	content:attr(tip);
+	-webkit-animation: fadein 1.5s; /* Safari, Chrome and Opera > 12.1 */
+	-moz-animation: fadein 1.5s; /* Firefox < 16 */
+	-ms-animation: fadein 1.5s; /* Internet Explorer */
+	-o-animation: fadein 1.5s; /* Opera < 12.1 */
+	animation: fadein 1.5s;
+}
+
+.tooltip:hover::before
+{
+	border: solid;
+    border-color: #555 transparent;
+    border-width: 6px 6px 0 6px;
+    bottom: 14px;
+    content: "";
+    left: 40%;
+    position: absolute;
+    z-index: 3;
+	-webkit-animation: fadein 1.5s; /* Safari, Chrome and Opera > 12.1 */
+	-moz-animation: fadein 1.5s; /* Firefox < 16 */
+	-ms-animation: fadein 1.5s; /* Internet Explorer */
+	-o-animation: fadein 1.5s; /* Opera < 12.1 */
+	animation: fadein 1.5s;
+}
+
+.img-highlight
+{
+	display: block;
+	background-color: white;
+	border-radius: 6px;
+	width: 250px;
+	height: 250px;
+}
+
+.price
+{
+	text-align: left;
+	display: inline-block;
+	vertical-align: middle;
+	padding-top: 5px;
+}
+
+.quantity
+{
+	display: block;
+	vertical-align: middle;
+	padding-top: 5px;
+}
+
+input:focus,
+select:focus,
+text:focus,
+button:focus
+{
+	outline: none; /* REMOVES FOCUS STYLING OF FORM ELEMENETS */
+}
+
+.minus
+{
+	background-color: #d12ea0;
+	border-radius: 360px;
+	border-style: solid;
+	border-bottom-color: #821c63;
+	border-right-color: #821c63;
+	border-top-color: #b02787;
+	border-left-color: #b02787;
+	width: 25px;
+	height: 25px;
+	text-align: center;
+	margin-right: 2.5px;
+	transition: all .08s ease-in-out;
+	
+	font-family: "Quattrocento";
+	font-size: 1.2em;
+	color: #FFFDFA;
+}
+
+.minus:hover
+{
+	border-bottom-color: #b02787;
+	border-right-color: #b02787;
+	border-top-color: #821c63;
+	border-left-color: #821c63;
+	cursor: pointer;
+}
+
+.minus:active
+{
+	border-top-color: #b02787;
+	border-left-color: #b02787;
+	cursor: pointer;
+}
+
+.plus
+{
+	background-color: #d12ea0;
+	border-radius: 360px;
+	border-style: solid;
+	border-bottom-color: #821c63;
+	border-right-color: #821c63;
+	border-top-color: #b02787;
+	border-left-color: #b02787;
+	width: 25px;
+	height: 25px;
+	text-align: center;
+	margin-left: 2.5px;
+	transition: all .08s ease-in-out;
+	
+	font-family: "Quattrocento";
+	font-size: 1.2em;
+	color: #FFFDFA;
+}
+
+.plus:hover
+{
+	border-bottom-color: #b02787;
+	border-right-color: #b02787;
+	border-top-color: #821c63;
+	border-left-color: #821c63;
+	cursor: pointer;
+}
+
+.plus:active
+{
+	border-top-color: #b02787;
+	border-left-color: #b02787;
+	cursor: pointer;
+}
+
+.input
+{
+	width:50px;
+	height: 18px;
+	border-radius: 6px;
+	border-style: outset;
+	text-align: center;
+}
+
+.button
+{
+	display: block;
+	width: 115px;
+	height: 25px;
+	background-color: #b02787;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 5px;
+	border-bottom-color: #821c63;
+	border-right-color: #821c63;
+	border-top-color: #b02787;
+	border-left-color: #821c63;
+	border-style: solid;
+	margin-left: 0px;
+	margin-top: 5px;
+	display: block;
+	
+	font-family: "Quanttrocento";
+	font-size: 0.90em;
+	font-style: oblique;
+	font-weight: 800;
+	color: #FFFDFA;
+}
+
+.button:active
+{
+	border-bottom-color: #b02787;
+	padding-top: 2.5px;
+	cursor: pointer;
+}
+
+.radio-list
+{
+	padding-top: 5px;
+	padding-bottom: 1.5px;
+}
+
+.radio-list label
+{
+	font-family: "Quattrocento";
+	font-weight: 500;
+	color: #FFFDFA;
+}
+
+.product-details
+{
+	display: inline-block;
+	vertical-align: top;
+	width: 400px;
+}
+
+.product-details h2
+{
+	font-family: "Risque";
+	font-size: 1.8em;
+	color: #FFFDFA;
+}
+
+.product-details p
+{
+	font-family: "Quattrocento";
+	font-size: 1.5em;
+	text-align: left;
+	padding-top: 10px;
+}
+
+.product-highlight
+{
+	display: inline-block;
+	margin-left: 40px;
+}
+
+.product-col
+{
+	display: inline-block;
+	width: 252px;
+}
+
+.description-col
+{
+	display: inline-block;
+	width: 500px;
+	vertical-align: top;
+	padding-left: 30px;
+}
+
+.description-col h1
+{
+	font-weight: 400;
+	font-size: 2.2em;
+	text-align: left;
+}
+
+.description-col p
+{
+	font-size: 1.3em;
+	text-align: left;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.login
+{
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+.login label
+{
+	display: block;
+	padding-top: 2.5px;
+	padding-bottom: 2.5px;
+}
+
+.login input
+{
+	margin-left: 280px;
+}
+
+.login label input
+{
+	font-family: "Quattrocento";
+	font-size: 1em;
+	color: #FFFDFA;
+	background-color: #d12ea0;
+	width:225px;
+	
+	border-style: outset;
+	border-color: #d12ea0;
+	
+	background-image: "";
+	background-repeat: no-repeat;
+	background-position: 223px;
+	background-size: 20px;
+	padding-right: 20px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+::placeholder /*CHROME, FIREFOX, OPERA and SAFARI 10.1+ */ 
+{ 
+	color: #FFFDFA;
+	opacity: 1; /*FIREFOX*/
+}
+
+:-ms-input-placeholder /* INTERENT EXPLORER 10-11 */
+{ 
+    color: #FFFDFA;
+}
+
+::-ms-input-placeholder /* MICROSOFT EDGE */
+{ 
+    color: #FFFDFA;
+}
+
+/* SMALL SCREEN/MOBILE SUPPORT */
+@media only screen and (max-width: 800px)
+{
+	.product-grid
+	{
+		width: 235px;
+	}
+	
+	.product
+	{
+		display: inline;
+		left: 0%;
+	}
+	
+	.description-col
+	{
+		display: inline;
+	}
+	
+	.description-col h1
+	{
+		font-size: 1.6em;
+	}
+	
+	.description-col p
+	{
+		font-size: 1.2em;
+	}
+	
+	.product-col
+	{
+		display: inline;
+	}
+	
+	.quantity
+	{
+		padding-left: 0px;
+	}
+	
+	.button
+	{
+		margin-left: 0px;
+	}
+	
+	.login
+	{
+		width: 300px;
+	}
+	
+	.login input
+	{
+		margin-left: 30px;
+	}
+}
