@@ -344,6 +344,12 @@ button:focus
 	cursor: pointer;
 }
 
+.depad
+{
+	padding: 0;
+	margin-left: 200px !important;
+}
+
 .radio-list
 {
 	padding-top: 5px;
@@ -521,5 +527,10 @@ button:focus
 	.login input
 	{
 		margin-left: 30px;
+	}
+	
+	.depad
+	{
+		margin-left: 50px !important;
 	}
 }

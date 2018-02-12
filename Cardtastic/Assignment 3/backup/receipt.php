@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Receipt</title>
+		<title>Cardtastic: Receipt</title>
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="$description">
-		<meta name="keywords" content="$keywords">
-		<meta name="author" content="$author">
+		<meta name="description" content="The cardtastic receipt page">
+		<meta name="keywords" content="cardtastic games store receipt australia">
+		<meta name="author" content="Cardtastic Dylan Randall">
 		
 		<link rel="stylesheet" href="css/receipt.css">
 	</head>
+	
+	<?php
+		session_start();
+		require_once('scripts/shared-content.php');
+	?>
 	
 	<body>
 		<main>
@@ -29,44 +34,84 @@ Email:          cardtastic@cardtastic.com.au
 				
 				<img id="logo" src="../img/cardtastic_logowhite.jpg" width=348 height=100>
 				
-				<p id="customer">Dylan David Randall</p>
 				
+				<?php
+					$customer = $_SESSION['receipt']['name'];
+					$output = <<<"OUTPUT"
+					<p id="customer">$customer</p>
+OUTPUT;
+					echo $output;
+				?>
+				
+				<?php
+					$date = $_SESSION['receipt']['purchase_date'];
+					$total = $_SESSION['receipt']['total'];
+					$output = <<<"OUTPUT"
 				<table id="meta">
 					<tr>
 						<td class="td-head">Date</td>
-						<td class="td-data">February 12, 2018</td>
+						<td class="td-data">$date</td>
 					</tr>
 					
 					<tr>
 						<td class="td-head">Amount Due</td>
-						<td class="td-data">$101.98</td>
+						<td class="td-data">&dollar;$total</td>
 					</tr>
 				</table>
-				
+OUTPUT;
+					echo $output;
+				?>
 				<table id="products">
 					<tr>
 						<th>Item</th>
 						<th>Description</th>
 						<th>Unit Cost</th>
 						<th>Quantity</th>
-						<th>Price</th>
+						<th>Subtotal</th>
 					</tr>
+				<?php 
 					
-					<tr>
-						<td>Test item</td>
-						<td>This is a test item description</td>
-						<td>$10.00</td>
-						<td>2</td>
-						<td>$20.00</td>
-					</tr>
+					$products = getProductsFromCSV();
+					foreach($_SESSION['receipt']['cart'] as $parent_key => $parent)
+					{
+						foreach($parent as $child_key => $child)
+						{
+							$name = $products[$child_key]['name'];
+							$description = $products[$child_key]['description'];
+							$description = strlen($description) > 60 ? substr($description, 0, 60)."..." : $description; /*LIMITS STRING SIZE*/
+							$unit_cost = (float)$products[$child_key]['price'];
+							$unit_costStr = number_format($unit_cost, 2);
+							$quantity = $_SESSION['receipt']['cart'][$parent_key][$child_key]['qty'];
+							$subtotal = $unit_cost * (float)$quantity;
+							$subtotalStr = number_format($subtotal, 2);
+							
+							$output = <<<"OUTPUT"
+						<tr>
+							<td>$name</td>
+							<td>$description</td>
+							<td>&dollar;$unit_costStr</td>
+							<td>$quantity</td>
+							<td>&dollar;$subtotalStr</td>
+						</tr>
+OUTPUT;
+							echo $output;		
+						}
+					}
+				?>
 				</table>
 				
+				<?php
+					$total = $_SESSION['receipt']['total'];
+					$output = <<<"OUTPUT"
 				<table id="total">
 					<tr>
 						<td class="td-head">Total</td>
-						<td class="td-data">$20.00</td>
+						<td class="td-data">&dollar;$total</td>
 					</tr>
 				</table>
+OUTPUT;
+					echo $output;
+				?>
 				
 				<div class="tc">
 					<h2 class="tc-head">T E R M S</h2>
@@ -77,8 +122,16 @@ Email:          cardtastic@cardtastic.com.au
 			<div class="align center">
 				<input type="button" onclick="printReceipt('print')" value="Print Receipt">
 			</div>
+			
+			<div class="align center">
+				<input type="button" onclick="redirect()" value="Back">
+			</div>
 		</main>
 		
 		<script type="text/javascript" src="scripts/receipt.js"></script>
 	</body>
 </html>
+
+<?php
+	include_once('/home/eh1/e54061/public_html/wp/debug.php');
+?>

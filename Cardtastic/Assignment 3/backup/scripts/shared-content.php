@@ -350,6 +350,16 @@ HEADER;
 					</ul>
 				</div>
 
+				<div class="site-map">
+					<h4>DEBUG</h4>
+					<ul class="sub_details">
+						<li>
+							<a href="data/products.csv"><p>PRODUCTS CSV SHEET</p></a>
+							<a href="data/orders.csv"><p>ORDERS CSV SHEET</p></a>
+						</li>
+					</ul>
+				</div>
+						
 				<div id="legal">
 					<p id="copy">&copy; Copyright 2018. Cardtastic Collectables and Gaming.</p>
 

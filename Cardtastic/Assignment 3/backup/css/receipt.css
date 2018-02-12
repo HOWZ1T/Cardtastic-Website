@@ -140,6 +140,11 @@
 	padding: 1px 2px 1px 2px;
 }
 
+#products tr
+{
+	border-bottom: 1px solid black;
+}
+
 #total
 {
 	float: right;
@@ -176,6 +181,8 @@ h2
 .align
 {
 	width: 21cm;
+	margin-top: 2.5px;
+	margin-bottom: 2.5px;
 }
 
 input

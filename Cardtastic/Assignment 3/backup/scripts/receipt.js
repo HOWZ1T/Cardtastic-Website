@@ -7,3 +7,8 @@ function printReceipt(divID)
 	window.print();
 	document.body.innerHTML = originalContents;
 }
+
+function redirect()
+{
+	window.location = "index.php";
+}
